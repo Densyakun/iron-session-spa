@@ -8,11 +8,11 @@ export default function Home() {
 
   return (
     <Layout>
-      {!user?.isLoggedIn && <LoginForm />}
-
       {user && (
         <>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
+          {user.isLoggedIn
+            ? <pre>{JSON.stringify(user, null, 2)}</pre>
+            : <LoginForm />}
         </>
       )}
     </Layout>
