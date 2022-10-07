@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Head>
-        <title>With Iron Session</title>
+        <title>Iron Session SPA</title>
       </Head>
       <style jsx global>{`
         *,

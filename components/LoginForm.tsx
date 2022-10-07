@@ -3,11 +3,7 @@ import useUser from "lib/useUser";
 import fetchJson, { FetchError } from "lib/fetchJson";
 
 export default function Form({ }) {
-  // here we just check if user is already logged in and redirect to profile
-  const { mutateUser } = useUser({
-    redirectTo: "/profile-sg",
-    redirectIfFound: true,
-  });
+  const { mutateUser } = useUser();
 
   const [errorMsg, setErrorMsg] = useState("");
 

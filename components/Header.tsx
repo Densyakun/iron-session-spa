@@ -19,27 +19,6 @@ export default function Header() {
           {user?.isLoggedIn === true && (
             <>
               <li>
-                <Link href="/profile-sg">
-                  <a>
-                    <span
-                      style={{
-                        marginRight: ".3em",
-                        verticalAlign: "middle",
-                        borderRadius: "100%",
-                        overflow: "hidden",
-                      }}
-                    >
-                    </span>
-                    Profile (Static Generation, recommended)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/profile-ssr">
-                  <a>Profile (Server-side Rendering)</a>
-                </Link>
-              </li>
-              <li>
                 {/* In this case, we're fine with linking with a regular a in case of no JavaScript */}
                 {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
