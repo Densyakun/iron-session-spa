@@ -39,7 +39,7 @@ export default function Form({ }) {
         }}>
           <label>
             <span>Type your password</span>
-            <input type="text" name="password" required />
+            <input type="password" name="password" required />
           </label>
 
           <button type="submit">Login</button>
