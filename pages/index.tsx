@@ -4,9 +4,7 @@ import LoginForm from "components/LoginForm";
 import useUser from "lib/useUser";
 
 export default function Home() {
-  const { user } = useUser({
-    redirectTo: "/",
-  });
+  const { user } = useUser();
 
   return (
     <Layout>
