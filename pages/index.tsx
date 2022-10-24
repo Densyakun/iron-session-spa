@@ -1,13 +1,19 @@
-import React from "react";
-import Layout from "components/Layout";
-import LoginForm from "components/LoginForm";
-import useUser from "lib/useUser";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import React from 'react'
+import Layout from 'components/Layout'
+import LoginForm from 'components/LoginForm'
+import useUser from 'lib/useUser'
 
-export default function Home() {
-  const { user } = useUser();
+const Home: NextPage = () => {
+  const { user } = useUser()
 
   return (
     <Layout>
+      <Head>
+        <title>Iron Session SPA</title>
+      </Head>
+
       {user && (
         <>
           {user.isLoggedIn
@@ -16,5 +22,7 @@ export default function Home() {
         </>
       )}
     </Layout>
-  );
+  )
 }
+
+export default Home
