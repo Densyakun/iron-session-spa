@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const { user } = useUser()
 
   return (
-    <Layout>
+    <Layout IS_PLACE_LOGOUT_BUTTON={user?.loginPasswordIsExist ?? false}>
       <Head>
         <title>Iron Session SPA</title>
       </Head>
